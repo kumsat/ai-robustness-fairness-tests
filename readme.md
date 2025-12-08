@@ -60,8 +60,6 @@ ai-robustness-fairness-tests/
   ├── requirements.txt
   └── README.md
 
-🧱 Architecture Overview 
-
 ## 🧱 Architecture Overview
 
 ```mermaid
@@ -85,9 +83,6 @@ flowchart TD
   A --> R
   A --> F
 ```
-
-This diagram visualizes how your pytest tests interact with the API client, which communicates with the local mock AI server.
-
 
 ----
 
