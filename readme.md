@@ -63,7 +63,7 @@ ai-robustness-fairness-tests/
 
 ## 🧱 Architecture Overview
 
-````markdown
+
 ```mermaid
 flowchart TD
 A["Pytest Test Suite"] --> B["API Client (requests)"]
@@ -84,6 +84,9 @@ end
 
 A --> R
 A --> F
+
+```
+
 ----
 
 🚀 How to Run the Project
