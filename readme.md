@@ -59,6 +59,7 @@ ai-robustness-fairness-tests/
   ├── .env.example          # Environment variable template
   ├── requirements.txt
   └── README.md
+```
 
 ## 🧱 Architecture Overview
 
