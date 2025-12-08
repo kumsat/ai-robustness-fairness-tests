@@ -62,8 +62,9 @@ ai-robustness-fairness-tests/
 
 🧱 Architecture Overview 
 
-flowchart TD
+Flowchart TD
 
+```mermaid
   A[Pytest Test Suite] --> B[API Client<br>(requests)]
   B --> C[Local Mock AI Server<br>(Flask classifier)]
   C --> D[Prediction + Confidence Response]
@@ -82,6 +83,8 @@ flowchart TD
 
   A --> R
   A --> F
+
+```
 
 This diagram visualizes how your pytest tests interact with the API client, which communicates with the local mock AI server.
 
