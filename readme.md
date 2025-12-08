@@ -59,26 +59,26 @@ ai-robustness-fairness-tests/
   ├── .env.example          # Environment variable template
   ├── requirements.txt
   └── README.md
-```
+
 
 ## 🧱 Architecture Overview
 
 ```mermaid
 flowchart TD
-  A[Pytest Test Suite] --> B[API Client (requests)]
-  B --> C[Local Mock AI Server (Flask classifier)]
-  C --> D[Prediction + Confidence Response]
+  A["Pytest Test Suite"] --> B["API Client (requests)"]
+  B --> C["Local Mock AI Server (Flask classifier)"]
+  C --> D["Prediction + Confidence Response"]
 
-  subgraph R[Robustness Tests]
-    R1[Case Variation]
-    R2[Punctuation Noise]
-    R3[Spacing Variations]
+  subgraph R["Robustness Tests"]
+    R1["Case Variation"]
+    R2["Punctuation Noise"]
+    R3["Spacing Variations"]
   end
 
-  subgraph F[Fairness Tests]
-    F1[Gender Swap]
-    F2[Nationality Swap]
-    F3[Neutrality Check]
+  subgraph F["Fairness Tests"]
+    F1["Gender Swap"]
+    F2["Nationality Swap"]
+    F3["Neutrality Check"]
   end
 
   A --> R
