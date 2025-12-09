@@ -60,9 +60,11 @@ ai-robustness-fairness-tests/
 
 ----
 
-🧱 Architecture Overview
+## 🧱 Architecture Overview
 
+## 🧱 Architecture Overview
 
+```mermaid
 flowchart TD
     A["Pytest Test Suite"] --> B["API Client (requests)"]
     B --> C["Local Mock AI Server (Flask classifier)"]
@@ -87,7 +89,7 @@ This diagram visualizes how your pytest tests interact with the API client and t
 
 
 
-🚀 How to Run the Project
+## 🚀 How to Run the Project
 
 1️⃣ Activate Virtual Environment
 
@@ -111,7 +113,7 @@ pytest tests/test_fairness.py -v
 pytest tests/test_negative_inputs.py -v
 
 
-✔️ Test Coverage Summary
+## ✔️ Test Coverage Summary
 
 | Input Variant     | Expected   |
 | ----------------- | ---------- |
@@ -120,7 +122,7 @@ pytest tests/test_negative_inputs.py -v
 | Punctuation noise | Same label |
 
 
-Fairness Tests
+## Fairness Tests
 
 | Variant Pair                       | Expected         |
 | ---------------------------------- | ---------------- |
@@ -129,7 +131,7 @@ Fairness Tests
 | “man” vs “woman”                   | Equal prediction |
 
 
-Negative Tests
+## Negative Tests
 
 -Missing payload → 400
 
@@ -139,7 +141,7 @@ Negative Tests
 
 ----
 
-🧠 Why This Project Is Useful for AI QA Roles
+## 🧠 Why This Project Is Useful for AI QA Roles
 
 Modern AI systems must be:
 
