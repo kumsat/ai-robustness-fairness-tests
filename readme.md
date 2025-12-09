@@ -1,4 +1,5 @@
-# 🧪 AI Robustness & Fairness Test Suite  
+# 🧪 AI Robustness & Fairness Test Suite
+
 ### Automated Testing Framework for Evaluating AI Text Classification Reliability
 
 This project demonstrates how to design **automated robustness and fairness tests** for an AI text classification system.  
@@ -14,7 +15,7 @@ The goal is to validate that an AI classifier is:
 
 ## ⭐ Key Features
 
-- 🔍 **Robustness Testing**  
+- **Robustness Testing**  
   Ensures consistent predictions across:
   - Upper/lower case  
   - Extra spaces  
@@ -27,19 +28,16 @@ The goal is to validate that an AI classifier is:
   - Nationality swaps  
   - Similar structured sentences  
 
-- 🚫 **Negative Testing**
+- **Negative Testing**
   - Missing payload  
   - Empty text  
   - Invalid types  
 
-- 🧪 **Local Flask-Based Mock AI Service**
+- **Local Flask-Based Mock AI Service**  
   Fully controlled & predictable behavior for safe testing.
 
-- 🏗 **Clean Pytest Setup**
-  Reusable fixtures, parametrized tests, modular utilities.
-
-- 🚀 **CI-Ready Structure**
-  Easily integratable with GitHub Actions.
+- **Clean Pytest Setup**  
+  Reusable, parametrized tests, modular utilities.
 
 ---
 
@@ -47,47 +45,47 @@ The goal is to validate that an AI classifier is:
 
 ```text
 ai-robustness-fairness-tests/
-  ├── mock_api/             # Local AI model simulation (Flask)
-  │     └── server.py
-  ├── utils/                # API client and helper utilities
-  │     ├── api_client.py
-  ├── tests/                # Robustness, fairness, and negative tests
-  │     ├── test_robustness.py
-  │     ├── test_fairness.py
-  │     ├── test_negative_inputs.py
-  │     └── __init__.py
-  ├── .env.example          # Environment variable template
-  ├── requirements.txt
-  └── README.md
-
-
-## 🧱 Architecture Overview
-
-
-```mermaid
-flowchart TD
-A["Pytest Test Suite"] --> B["API Client (requests)"]
-B --> C["Local Mock AI Server (Flask classifier)"]
-C --> D["Prediction + Confidence Response"]
-
-subgraph R["Robustness Tests"]
-R1["Case Variation"]
-R2["Punctuation Noise"]
-R3["Spacing Variations"]
-end
-
-subgraph F["Fairness Tests"]
-F1["Gender Swap"]
-F2["Nationality Swap"]
-F3["Neutrality Check"]
-end
-
-A --> R
-A --> F
-
-```
+├── mock_api/              # Local AI model simulation (Flask)
+│   └── server.py
+├── utils/                 # API client and helper utilities
+│   └── api_client.py
+├── tests/                 # Robustness, fairness, and negative tests
+│   ├── test_robustness.py
+│   ├── test_fairness.py
+│   ├── test_negative_inputs.py
+│   └── __init__.py
+├── .env.example           # Environment variable template
+├── requirements.txt
+└── README.md
 
 ----
+
+🧱 Architecture Overview
+
+
+flowchart TD
+    A["Pytest Test Suite"] --> B["API Client (requests)"]
+    B --> C["Local Mock AI Server (Flask classifier)"]
+    C --> D["Prediction + Confidence Response"]
+
+    subgraph R["Robustness Tests"]
+        R1["Case Variation"]
+        R2["Punctuation Noise"]
+        R3["Spacing Variations"]
+    end
+
+    subgraph F["Fairness Tests"]
+        F1["Gender Swap"]
+        F2["Nationality Swap"]
+        F3["Neutrality Check"]
+    end
+
+    A --> R
+    A --> F
+
+This diagram visualizes how your pytest tests interact with the API client and the local mock AI server.
+
+
 
 🚀 How to Run the Project
 
