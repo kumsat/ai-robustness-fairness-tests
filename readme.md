@@ -62,8 +62,6 @@ ai-robustness-fairness-tests/
 
 ## 🧱 Architecture Overview
 
-## 🧱 Architecture Overview
-
 ```mermaid
 flowchart TD
     A["Pytest Test Suite"] --> B["API Client (requests)"]
@@ -84,6 +82,8 @@ flowchart TD
 
     A --> R
     A --> F
+```
+
 
 This diagram visualizes how your pytest tests interact with the API client and the local mock AI server.
 
