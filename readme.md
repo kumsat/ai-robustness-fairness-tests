@@ -3,7 +3,7 @@
 ### Automated Testing Framework for Evaluating AI Text Classification Reliability
 
 This project demonstrates how to design **automated robustness and fairness tests** for an AI text classification system.  
-It includes a **local mock AI model**, **pytest test suite**, and **professional QA engineering structure** suitable for real-world AI/ML testing.
+It includes a **local mock AI model**, **pytest test suite**, and a **professional QA engineering structure** suitable for real-world AI/ML testing.
 
 The goal is to validate that an AI classifier is:
 
@@ -57,8 +57,9 @@ ai-robustness-fairness-tests/
 ├── .env.example           # Environment variable template
 ├── requirements.txt
 └── README.md
+```
 
-----
+---
 
 ## 🧱 Architecture Overview
 
@@ -84,36 +85,46 @@ flowchart TD
     A --> F
 ```
 
-
 This diagram visualizes how your pytest tests interact with the API client and the local mock AI server.
 
-
+---
 
 ## 🚀 How to Run the Project
 
-1️⃣ Activate Virtual Environment
+### 1️⃣ Activate Virtual Environment
 
+```bash
 cd ai-robustness-fairness-tests
 source .venv/bin/activate
+```
 
-2️⃣ Start the Mock AI Server (Terminal 1)
+### 2️⃣ Start the Mock AI Server (Terminal 1)
 
+```bash
 python3 mock_api/server.py
+```
 
-3️⃣ Run Tests (Terminal 2)
+### 3️⃣ Run Tests (Terminal 2)
 
+```bash
 cd ai-robustness-fairness-tests
 source .venv/bin/activate
 pytest -v
+```
 
-4️⃣ Run Specific Tests
+### 4️⃣ Run Specific Tests
 
+```bash
 pytest tests/test_robustness.py -v
 pytest tests/test_fairness.py -v
 pytest tests/test_negative_inputs.py -v
+```
 
+---
 
 ## ✔️ Test Coverage Summary
+
+### Robustness Tests
 
 | Input Variant     | Expected   |
 | ----------------- | ---------- |
@@ -121,39 +132,34 @@ pytest tests/test_negative_inputs.py -v
 | Extra spaces      | Same label |
 | Punctuation noise | Same label |
 
+### Fairness Tests
 
-## Fairness Tests
-
-| Variant Pair                       | Expected         |
+| Variant Pair                        | Expected         |
 | ---------------------------------- | ---------------- |
 | “He is…” vs “She is…”              | Equal prediction |
 | “Indian people” vs “German people” | Equal prediction |
 | “man” vs “woman”                   | Equal prediction |
 
+### Negative Tests
 
-## Negative Tests
+- Missing payload → **400**  
+- Empty string → **400**  
+- Invalid types → **400**
 
--Missing payload → 400
-
--Empty string → 400
-
--Invalid types → 400
-
-----
+---
 
 ## 🧠 Why This Project Is Useful for AI QA Roles
 
 Modern AI systems must be:
 
-Bias-resistant
-
-Robust against noise
-
-Consistent across demographic variations
+- Bias-resistant  
+- Robust against noise  
+- Consistent across demographic variations  
 
 This project demonstrates:
 
-✔ Real-world ML testing scenarios
-✔ Methodical robustness checks
-✔ Practical fairness evaluation
-✔ Clean automated testing architecture
+- ✔ Real-world ML testing scenarios  
+- ✔ Methodical robustness checks  
+- ✔ Practical fairness evaluation  
+- ✔ Clean automated testing architecture  
+
